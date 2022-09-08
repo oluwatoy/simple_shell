@@ -16,13 +16,14 @@ int _setenv(const char *name, const char *value)
 	char *buf_tmp;
 	char *element_ptr = get_array_element(environ, (char *) name);
 	int len;
+
 	if (value == NULL)
 	{
 		write(STDERR_FILENO, "setenv: no value given\n", 23);
 		status = 2;
 		return (SKIP_FORK);
 	}
-	/* updated*/
+
 	buffer = str_concat((char *)name, "=");
 	buf_tmp = str_concat(buffer, (char *)value);
 	free(buffer);
