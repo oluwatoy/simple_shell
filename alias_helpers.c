@@ -21,7 +21,7 @@ int free_aliases(alias *alias_ptr)
 		free(tmp);
 	}
 
-	return (TRUE);
+	return (TRUE);/* if == NULL return true*/
 }
 
 /**

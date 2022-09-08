@@ -6,7 +6,7 @@
 .B ./hsh
  ... [COMMAND] [OPTION] [ARGUMENT]
 .SH DESCRIPTION
-Simple Shell executes commands taken from standard input and shows the results on standard output.
+Simple Shell executes commands taken from standard input and shows the results on standard output always.
 .SH OPTIONS
 various commands have options, such as the option '-l' for 'ls'  which shows the directory contents in long form
 .SH ARGUMENTS

@@ -36,9 +36,7 @@ char *_strdup(char *src)
 
 	if (dest == NULL)
 		exit(EXIT_FAILURE);
-
 	ptr = dest;
-
 	while (*src != '\0')
 	{
 		*ptr = *src;
@@ -47,7 +45,6 @@ char *_strdup(char *src)
 	}
 
 	*ptr = '\0';
-
 	return (dest);
 }
 

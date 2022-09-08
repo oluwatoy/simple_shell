@@ -1,7 +1,5 @@
 #include "shell.h"
-
 int status;
-
 char *shell_name;
 
 /**
@@ -18,13 +16,11 @@ int command_manager(char **args)
 	char prev_op = 'c';
 	char next_op = 'c';
 	int what_do;
-
 	while (*args != NULL && prev_eval != EXIT_SHELL)
 	{
 		while (*args_ptr != NULL && **args_ptr != '&'
 		       && **args_ptr != '|')
 			args_ptr++;
-
 		if (str_compare(*args_ptr, "||", MATCH) == TRUE)
 		{
 			*args_ptr = NULL;
@@ -39,7 +35,7 @@ int command_manager(char **args)
 		}
 		if (next_op == 'c')
 			break;
-
+	/*updated*/
 		prev_eval = and_or(args, prev_op, prev_eval);
 		if (prev_eval == FALSE)
 			no_err = FALSE;

@@ -1,5 +1,4 @@
 #include "shell.h"
-
 /**
  * get_array_element - gets an element of an array
  * @array: array to be searched
@@ -34,7 +33,6 @@ char **make_array(char *str, char delim, char **if_sep)
 	char *str_ptr = str;
 	unsigned int i = 2;
 	char **array = NULL;
-
 	while (*str_ptr != '\0')
 	{
 		if (*str_ptr == ';')
@@ -52,7 +50,6 @@ char **make_array(char *str, char delim, char **if_sep)
 	array[0] = str;
 	str_ptr = str;
 	i = 1;
-
 	while (*str_ptr != '\0')
 	{
 		if (*str_ptr == delim)
@@ -89,7 +86,6 @@ char **make_array(char *str, char delim, char **if_sep)
 int list_len(char **list, char *entry)
 {
 	int i = 0;
-
 	if (entry == NULL)
 	{
 		while (*list != NULL)
