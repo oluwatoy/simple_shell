@@ -1,4 +1,5 @@
 #include "shell.h"
+
 /**
  * _itoa - converts an int into a string
  * @n: int to be converted
@@ -12,6 +13,7 @@ char *_itoa(int n)
 	int is_min = FALSE;
 	int i_mask = 1000000000;
 	int digit = 0;
+
 	if (n == INT_MIN)
 	{
 		*ptr = '-';
@@ -19,12 +21,14 @@ char *_itoa(int n)
 		n = INT_MAX;
 		is_min = TRUE;
 	}
+
 	if (n < 0)
 	{
 		*ptr = '-';
 		ptr++;
 		n = -n;
 	}
+
 	while (i_mask > 9 && digit == 0)
 	{
 		digit = n / i_mask;
