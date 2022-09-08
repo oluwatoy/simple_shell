@@ -1,7 +1,9 @@
 #include "shell.h"
 
 int status = 0;
+
 int line_num = 1;
+
 char *shell_name = NULL;
 
 /**
@@ -21,8 +23,11 @@ int main(__attribute__((unused))int ac, char **av)
 	char *buf_ptr;
 	char *buf_tmp;
 	char **args = NULL;
+
 	shell_name = _strdup(*av);
+
 	environ = array_cpy(environ, list_len(environ, NULL));
+
 	signal(SIGINT, SIG_IGN);
 
 	buf = malloc(1);
